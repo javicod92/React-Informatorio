@@ -1,0 +1,43 @@
+import { useEffect, useState } from 'react';
+
+const API_URL = 'https://rickandmortyapi.com/api/character';
+
+export default function Peticiones() {
+  const [characters, setCharacters] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch(API_URL)
+      .then((res) => res.json())
+      .then((data) => {
+        setCharacters(data.results);
+      })
+      .catch(() => {
+        setError('Hubo un error');
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
+
+  if (isLoading) {
+    return <p>Cargando ando....</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
+  return (
+    <div>
+      <h1>Peticiones</h1>
+      <ul>
+        {characters.map((character) => {
+          return <li>{character.name}</li>;
+        })}
+      </ul>
+    </div>
+  );
+}
