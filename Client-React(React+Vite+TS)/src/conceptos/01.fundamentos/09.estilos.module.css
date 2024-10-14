@@ -1,0 +1,13 @@
+.cover {
+  width: 250px;
+  height: 250px;
+}
+
+.container {
+  background-color: red;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1rem;
+}
