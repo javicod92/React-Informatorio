@@ -1,3 +1,4 @@
+// Utilizar useReducer
 import { useEffect, useState } from 'react';
 
 const API_URL = 'https://rickandmortyapi.com/api/character';

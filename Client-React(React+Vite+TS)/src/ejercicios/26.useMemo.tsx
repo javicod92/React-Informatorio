@@ -1,0 +1,1 @@
+// Crea una lista de números del 1 al 1000, y agrega un filtro que permita mostrar solo los números pares o impares. Usa useMemo para memorizar el cálculo de los números filtrados y evita que se recalculen cada vez que se renderiza el componente.

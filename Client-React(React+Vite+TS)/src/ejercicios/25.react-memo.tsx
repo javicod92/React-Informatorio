@@ -1,0 +1,1 @@
+// Crea un componente de lista de usuarios que reciba una lista de usuarios y los renderice en una lista. Usa React.memo para evitar que el componente de usuario individual se vuelva a renderizar cuando no cambian sus props.
